@@ -75,7 +75,7 @@ Add `package.json`:
 
 ### Example
 
-* For a file `foo.ts`:
+* For a file `foo.ts` in directory src:
 
 ```js
 export const sum
@@ -83,10 +83,9 @@ export const sum
     a.reduce((acc, val) => acc + val, 0);
 ```
 
-* A simple `foo.test.ts`:
-
+* A simple `foo.test.ts` in directory src/__tests__:
 ```js
-import { sum } from '../';
+import { sum } from '../foo';
 
 test('basic', () => {
   expect(sum()).toBe(0);
